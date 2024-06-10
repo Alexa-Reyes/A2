@@ -4,7 +4,7 @@
 
 ## Overview
 
-This project demonstrates an n-body simulation, specifically showcasing a three-body simulation, for students in an Object-Oriented Programming (OOP) class. The simulation visualizes the chaotic and intricate orbits resulting from gravitational interactions between multiple bodies.
+This project demonstrates an n-body simulation. The simulation visualizes the chaotic and intricate orbits resulting from gravitational interactions between multiple bodies.
 
 ## Features
 
@@ -106,6 +106,10 @@ You can customize the simulation by modifying the `SimulationSettings` object (w
 - `setShowTrail(boolean show)`: Toggle trails behind the bodies.
 
 etc. See assignment document for full list.
+
+Inspired By
+
+This project was inspired by the [threebodysimulation](https://github.com/evtyz/threebodysimulation) repository by evtyz.
 
 ## License
 
