@@ -1,7 +1,3 @@
-Sure, here's the formatted GitHub README file in Markdown:
-
----
-
 # N-Body Simulation for OOP Class
 
 ![Simulation Demo](https://media.giphy.com/media/l3vR85PnGsBwu1PFK/giphy.gif)
