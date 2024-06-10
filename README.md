@@ -107,7 +107,7 @@ You can customize the simulation by modifying the `SimulationSettings` object (w
 
 etc. See assignment document for full list.
 
-Inspired By
+## Inspired By
 
 This project was inspired by the [threebodysimulation](https://github.com/evtyz/threebodysimulation) repository by evtyz.
 
