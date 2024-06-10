@@ -29,7 +29,7 @@ This project demonstrates an n-body simulation, specifically showcasing a three-
 
 2. Open the project in your preferred IDE.
 
-3. Ensure that the required libraries (if any) are properly included in your project settings.
+3. Ensure that the required libraries are properly included in your project settings either using Maven (see [pom.xml](https://github.com/Santius0/nbodysim/blob/main/pom.xml) for more details) or via the included jar files found in [lib](https://github.com/Santius0/nbodysim/tree/main/lib).
 
 ### Running the Simulation
 
@@ -109,7 +109,7 @@ etc. See assignment document for full list.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Santius0/nbodysim/blob/main/LICENSE) file for details.
 
 ---
 
