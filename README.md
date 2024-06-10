@@ -107,10 +107,6 @@ You can customize the simulation by modifying the `SimulationSettings` object (w
 
 etc. See assignment document for full list.
 
-## Inspired By
-
-This project was inspired by the [threebodysimulation](https://github.com/evtyz/threebodysimulation) repository by evtyz.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Santius0/nbodysim/blob/main/LICENSE) file for details.
