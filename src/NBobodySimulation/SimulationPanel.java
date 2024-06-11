@@ -280,7 +280,7 @@ public class SimulationPanel extends JPanel implements Configurable {
                         double radius = circleDiameter[i] / 2;
                         gc.fillOval(relativePosition[0] - radius, relativePosition[1] - radius, radius * 2, radius * 2);
                         if (settings.showTrail())
-                            drawTrail(trailCanvas.getGraphicsContext2D(), body, radius/2);
+                            drawTrail(trailCanvas.getGraphicsContext2D(), body, radius/6);
                     }
             }
         });
