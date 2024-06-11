@@ -107,6 +107,9 @@ You can customize the simulation by modifying the `SimulationSettings` object (w
 
 etc. See assignment document for full list.
 
+## Inspired By
+The [3-body problem](https://en.wikipedia.org/wiki/Three-body_problem) in classical mechanics.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Santius0/nbodysim/blob/main/LICENSE) file for details.
