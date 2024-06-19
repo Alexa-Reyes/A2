@@ -8,6 +8,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import org.apache.commons.math4.legacy.ode.nonstiff.DormandPrince853Integrator;
+//import org.apache.commons.math3.ode.nonstiff.DormandPrince853Integrator; // if you're using Maven, use this import instead
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,6 +1,7 @@
 package NBobodySimulation;
 
 import org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations;
+// import org.apache.commons.math3.ode.FirstOrderDifferentialEquations; // If you're using Maven, use this import statement instead
 
 /**
  * A class that represents the differential equations, which govern the movement of particles in an arbitrary number of dimensions.

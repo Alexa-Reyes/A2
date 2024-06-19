@@ -5,6 +5,11 @@ import org.apache.commons.math4.legacy.exception.NumberIsTooLargeException;
 import org.apache.commons.math4.legacy.exception.NumberIsTooSmallException;
 import org.apache.commons.math4.legacy.ode.nonstiff.DormandPrince853Integrator;
 
+// If you're using Maven, use these imports instead
+//import org.apache.commons.math3.exception.NumberIsTooLargeException;
+//import org.apache.commons.math3.exception.NumberIsTooSmallException;
+//import org.apache.commons.math3.ode.nonstiff.DormandPrince853Integrator;
+
 public class Simulation implements Configurable {
 
     private DormandPrince853Integrator integrator;
