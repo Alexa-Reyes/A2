@@ -14,7 +14,19 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+class InvalidSimulationPanelSizeException extends RuntimeException {
+    public InvalidSimulationPanelSizeException(int width, int height, int minWidth, int minHeight) {
+        super(String.format("Invalid simulation panel size: width=%d (minimum=%d), height=%d (minimum=%d). "
+                        + "Please call simulation.getPanel().setSize(int, int) with appropriate values before calling simulation.configure(SimulationSettings).",
+                width, minWidth, height, minHeight));
+    }
+}
+
 public class SimulationPanel extends JPanel implements Configurable {
+
+    private static final int MIN_WIDTH = 800;
+    private static final int MIN_HEIGHT = 800;
+
     double particleScale = 1;
     double[] translationScale = new double[2];
 
@@ -38,8 +50,24 @@ public class SimulationPanel extends JPanel implements Configurable {
     }
 
     @Override
+    public void setSize(int width, int height){
+        validatePanelSize(width, height);
+        super.setSize(width, height);
+    }
+
+    private void validatePanelSize(int width, int height){
+        try {
+            if(width < MIN_WIDTH || height < MIN_HEIGHT) throw new InvalidSimulationPanelSizeException(getWidth(), getHeight(), MIN_WIDTH, MIN_HEIGHT);
+        } catch (InvalidSimulationPanelSizeException e) {
+            System.err.println(e.getMessage());
+            System.exit(1);
+        }
+    }
+
+    @Override
     public void configure(SimulationSettings settings) {
         Platform.runLater(() -> {
+            validatePanelSize(getWidth(), getHeight());
             this.settings = settings;
             canvas = new Canvas(getWidth(), getHeight());
             trailCanvas = new Canvas(getWidth(), getHeight());

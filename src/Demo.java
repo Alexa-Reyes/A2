@@ -14,12 +14,12 @@ public class Demo extends JFrame {
 
     public Demo() {
         setTitle("Demo");
-        setSize(800, 800);
+        setSize(1280, 900);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel mainPanel = new JPanel(new BorderLayout()); // <= Important! Panel holding sim visualiser needs a layout to enforce size
                                                            // BorderLayout works well as things added to it should use space available.
 
-
+        simulation.getPanel().setSize(800, 800); // <= Minimum allowable panel size is 800 x 800.
         mainPanel.add(simulation.getPanel()); // <= Important! A panel on you UI window needs a reference to the simulation's panel
                                               // Note: If you re-instantiate simulation after doing this it will delete the panel being
                                               // referenced as well so nothing will show up on screen.
@@ -38,16 +38,10 @@ public class Demo extends JFrame {
 
         // This body configuration will create a simple chaotic 3-body orbit
         ArrayList<OrbitalBody> bodies = new ArrayList<>();
-
-
-        bodies.add(new OrbitalBody(new double[]{100, 100}, new double[]{30, 0}, 1, Color.RED));
-        bodies.add(new OrbitalBody(new double[]{-100, -100}, new double[]{-30, 0}, 1, Color.BLUE));
-        bodies.add(new OrbitalBody(new double[]{0, 0}, new double[]{0, 1}, 1, Color.GREEN));
-
         // Chaotic 3-body orbit
-//        bodies.add(new OrbitalBody(new double[]{150, 50}, new double[]{-15, -30}, 3, Color.RED));
-//        bodies.add(new OrbitalBody(new double[]{50, -150}, new double[]{5, 40}, 3, Color.GREEN));
-//        bodies.add(new OrbitalBody(new double[]{-200, -50}, new double[]{10, -10}, 3, Color.BLUE));
+        bodies.add(new OrbitalBody(new double[]{150, 50}, new double[]{-15, -30}, 3, Color.RED));
+        bodies.add(new OrbitalBody(new double[]{50, -150}, new double[]{5, 40}, 3, Color.GREEN));
+        bodies.add(new OrbitalBody(new double[]{-200, -50}, new double[]{10, -10}, 3, Color.BLUE));
         SimulationSettings settings = new SimulationSettings(bodies);
         settings.setInfinite(true);
         settings.setShowCenterOfGravity(false);
