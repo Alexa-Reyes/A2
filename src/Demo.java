@@ -29,7 +29,7 @@ public class Demo extends JFrame {
 
 
         add(mainPanel);
-        setVisible(true);                     // Important! Only configure sim after adding panel to UI and making that UI visible
+        setVisible(true);
 
         // configuring simple text area
         textArea.setEditable(false);
