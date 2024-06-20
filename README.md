@@ -104,7 +104,7 @@ Fully configured projects are available in this repository as `.zip` files for e
 
 - `nbody-sim-bluej.zip`
 - `nbody-sim-netbeans.zip`
-- `nbody-sim-vscode.zip` (to be added)
+- `nbody-sim-vscode.zip`
 - `nbody-sim-intellij.zip` (to be added)
 - `nbody-sim-intellij-maven.zip` (to be added)
 
