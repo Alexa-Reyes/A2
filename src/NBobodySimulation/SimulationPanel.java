@@ -83,7 +83,7 @@ public class SimulationPanel extends JPanel implements Configurable {
 
             circleDiameter = new double[bodies.size()];
             for (int i = 0; i < bodies.size(); i++) circleDiameter[i] = Math.sqrt(bodies.get(i).getMass()/settings.avgMass()) * 10;
-            oldCanvasPos = new double[bodies.size()][settings.getDimensions()];
+            oldCanvasPos = new double[bodies.size()][settings.getBodies().get(0).getDimensions()];
             for (int i = 0; i < bodies.size(); i++) oldCanvasPos[i] = returnRelativePosition(bodies.get(i).getPosition());
             setBackgroundColor(settings.getBackgroundColor());
             StackPane root = new StackPane();
@@ -140,7 +140,7 @@ public class SimulationPanel extends JPanel implements Configurable {
         double maxX = Double.MIN_VALUE;
         double maxY = Double.MIN_VALUE;
 
-        for (int i = 0; i < flatBodies.length; i += settings.getDimensions() * 2) {
+        for (int i = 0; i < flatBodies.length; i += settings.getBodies().get(0).getDimensions() * 2) {
             minX = Math.min(minX, flatBodies[i]);
             minY = Math.min(minY, flatBodies[i + 1]);
             maxX = Math.max(maxX, flatBodies[i]);

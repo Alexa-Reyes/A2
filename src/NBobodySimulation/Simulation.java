@@ -48,7 +48,7 @@ public class Simulation implements Configurable {
     private void reset(){
         panel.clear();
         differentialEquations = new DifferentialEquations(settings.getMasses());
-        flattenedBodies = new double[settings.getBodies().size() * settings.getDimensions() * 2]; // n bodies, d dimensions, position and acceleration
+        flattenedBodies = new double[settings.getBodies().size() * settings.getBodies().get(0).getDimensions() * 2]; // n bodies, d dimensions, position and acceleration
         currentTime = settings.getSkipAhead();
     }
 
@@ -89,7 +89,7 @@ public class Simulation implements Configurable {
     }
 
     private void updateBodies() {
-        int flattenedBodyLength = settings.getDimensions() * 2;
+        int flattenedBodyLength = settings.getBodies().get(0).getDimensions() * 2;
         for (int i = 0; i < flattenedBodies.length; i += flattenedBodyLength) {
             double[] position = new double[]{flattenedBodies[i], flattenedBodies[i + 1]};
             double[] velocity = new double[]{flattenedBodies[i + 2], flattenedBodies[i + 3]};
