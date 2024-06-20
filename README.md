@@ -35,6 +35,8 @@ This project demonstrates an n-body simulation. The simulation visualizes the ch
 
 To run the simulation, execute the `Demo` class. This can typically be done by right-clicking on the `Demo` class in your IDE and selecting "Run".
 
+**Note: You have to finish `SimulationSettings.java` for the demo to work!**
+
 ### Example Code
 
 Here's a snippet of the main `Demo` class to get you started:
