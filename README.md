@@ -98,7 +98,7 @@ public class Demo extends JFrame {
 }
 ```
 
-### Preconfigured Project Configurations
+### Preconfigured Projects
 
 Fully configured projects are available in this repository as `.zip` files for each of the indicated IDEs:
 
