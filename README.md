@@ -52,51 +52,61 @@ import java.util.ArrayList;
 
 public class Demo extends JFrame {
 
-    Simulation simulation = new Simulation();
-    JTextArea textArea = new JTextArea();
+   Simulation simulation = new Simulation();
+   JTextArea textArea = new JTextArea();
 
-    public Demo() {
-        setTitle("Demo");
-        setSize(800, 800);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JPanel mainPanel = new JPanel(new BorderLayout());
-        mainPanel.add(simulation.getPanel());
-        add(mainPanel);
-        setVisible(true);
+   public Demo() {
+      setTitle("Demo");
+      setSize(800, 800);
+      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      JPanel mainPanel = new JPanel(new BorderLayout());
+      mainPanel.add(simulation.getPanel());
+      add(mainPanel);
+      setVisible(true);
 
-        textArea.setEditable(false);
-        mainPanel.add(textArea, BorderLayout.SOUTH);
+      textArea.setEditable(false);
+      mainPanel.add(textArea, BorderLayout.SOUTH);
 
-        ArrayList<OrbitalBody> bodies = new ArrayList<>();
-        bodies.add(new OrbitalBody(new double[]{100, 100}, new double[]{30, 0}, 1, Color.RED));
-        bodies.add(new OrbitalBody(new double[]{-100, -100}, new double[]{-30, 0}, 1, Color.BLUE));
-        bodies.add(new OrbitalBody(new double[]{0, 0}, new double[]{0, 1}, 1, Color.GREEN));
+      ArrayList<OrbitalBody> bodies = new ArrayList<>();
+      bodies.add(new OrbitalBody(new double[]{100, 100}, new double[]{30, 0}, 1, Color.RED));
+      bodies.add(new OrbitalBody(new double[]{-100, -100}, new double[]{-30, 0}, 1, Color.BLUE));
+      bodies.add(new OrbitalBody(new double[]{0, 0}, new double[]{0, 1}, 1, Color.GREEN));
 
-        SimulationSettings settings = new SimulationSettings(bodies);
-        settings.setInfinite(true);
-        settings.setShowCenterOfGravity(false);
-        settings.setBackgroundColor(Color.WHITE);
-        settings.setShowTrail(true);
+      SimulationSettings settings = new SimulationSettings(bodies);
+      settings.setInfinite(true);
+      settings.setShowCenterOfGravity(false);
+      settings.setBackgroundColor(Color.WHITE);
+      settings.setShowTrail(true);
 
-        simulation.configure(settings);
-        simulation.start();
+      simulation.configure(settings);
+      simulation.start();
 
-        new Timer(100, e -> updateTextArea(bodies)).start();
-    }
+      new Timer(100, e -> updateTextArea(bodies)).start();
+   }
 
-    private void updateTextArea(java.util.List<OrbitalBody> bodies) {
-        StringBuilder sb = new StringBuilder();
-        for (OrbitalBody body : bodies) {
-            sb.append(body.toString()).append("\n");
-        }
-        textArea.setText(sb.toString());
-    }
+   private void updateTextArea(java.util.List<OrbitalBody> bodies) {
+      StringBuilder sb = new StringBuilder();
+      for (OrbitalBody body : bodies) {
+         sb.append(body.toString()).append("\n");
+      }
+      textArea.setText(sb.toString());
+   }
 
-    public static void main(String[] args) {
-        new Demo();
-    }
+   public static void main(String[] args) {
+      new Demo();
+   }
 }
 ```
+
+### Preconfigured Project Configurations
+
+Fully configured projects are available in this repository as `.zip` files for each of the indicated IDEs:
+
+- `nbody-sim-bluej.zip`
+- `nbody-sim-netbeans.zip`
+- `nbody-sim-vscode.zip` (to be added)
+- `nbody-sim-intellij.zip` (to be added)
+- `nbody-sim-intellij-maven.zip` (to be added)
 
 ## Customization
 
