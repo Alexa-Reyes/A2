@@ -57,9 +57,10 @@ public class Demo extends JFrame {
 
    public Demo() {
       setTitle("Demo");
-      setSize(800, 800);
+      setSize(1200, 900);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       JPanel mainPanel = new JPanel(new BorderLayout());
+      simulation.getPanel().setSize(800, 800);
       mainPanel.add(simulation.getPanel());
       add(mainPanel);
       setVisible(true);
